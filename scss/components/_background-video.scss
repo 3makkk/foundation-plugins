@@ -1,0 +1,60 @@
+
+$include-html-background-video-classes: $include-html-classes !default;
+
+@mixin media-background-container {
+  position: relative;
+}
+
+@mixin background-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+@mixin background-mask {
+  background-position: left -0px;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: cover;
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba($primary-color, 0.2);
+}
+
+@mixin background-media {
+  position: absolute;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+}
+
+@mixin media-background-content {
+  position: relative;
+  z-index: 2;
+}
+
+@include exports("background-video") {
+  @if $include-html-background-video-classes {
+
+    .background-media {
+      @include media-background-container;
+
+      > .background { @include background-wrapper;
+        .mask {  @include background-mask; }
+        .media {  @include background-media; }
+      }
+
+      > .content {  @include media-background-content; }
+    }
+  }
+}
+
+

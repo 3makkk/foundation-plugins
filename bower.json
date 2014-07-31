@@ -1,0 +1,7 @@
+{
+  "name": "emak-foundation-plugins",
+  "version": "0.1",
+  "dependencies": {
+    "foundation": "zurb/bower-foundation"
+  }
+}
