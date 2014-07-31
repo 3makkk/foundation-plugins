@@ -1,15 +1,16 @@
 {
   "name": "emak-foundation-plugins",
   "version": "0.1",
-  "main": {
-  		"scss/components/_background-video.scss"
-  	},
+  "licence": "MIT",
+  "main": [
+    "scss/components/_background-video.scss"
+  ],
   "dependencies": {
     "foundation": "zurb/bower-foundation"
   },
   "ignore": [
-  	"LICENCE",
-  	"README.md",
-  	"bower.json"
+    "LICENCE",
+    "README.md",
+    "bower.json"
   ]
 }
