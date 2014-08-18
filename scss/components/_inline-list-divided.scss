@@ -1,0 +1,25 @@
+$inline-list-divider-color: #fff;
+
+@mixin inline-list-divided() {
+
+  list-style: none;
+  overflow: $inline-list-overflow;
+
+
+  & > li {
+    border-right: 1px solid $inline-list-divider-color;
+    &:last-child { border-right: none;}
+    margin: 0;
+    padding: 0 .5em;
+    list-style: none;
+    float: $default-float;
+    display: $inline-list-display;
+    &>* { display: $inline-list-children-display; }
+  }
+}
+
+ul.inline-list-divided {
+  @include inline-list-divided();
+}
+
+
