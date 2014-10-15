@@ -1,4 +1,5 @@
-$inline-list-divider-color: #fff;
+$include-html-inline-list-divided-classes: $include-html-classes !default;
+$inline-list-divider-color: lighten($body-font-color, 10);
 
 @mixin inline-list-divided() {
 
@@ -18,8 +19,11 @@ $inline-list-divider-color: #fff;
   }
 }
 
-ul.inline-list-divided {
-  @include inline-list-divided();
+@include exports("inline-list-divided") {
+  @if $include-html-inline-list-divided-classes {
+    ul.inline-list-divided {
+      @include inline-list-divided();
+    }
+  }
 }
-
 

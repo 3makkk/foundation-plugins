@@ -11,6 +11,10 @@
   "ignore": [
     "LICENCE",
     "README.md",
-    "bower.json"
+    "bower.json",
+    ".gitignore",
+    "package.json",
+    "Gruntfile.js",
+    "index.html"
   ]
 }
