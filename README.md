@@ -6,16 +6,11 @@ Emak Foundation Plugins is a responsive front-end plugin collection for [ZURB Fo
 Recommended Install
 ------------
 
-Install [ZURB Foundation](http://foundation.zurb.com/docs/sass.html
+*  Install [ZURB Foundation](http://foundation.zurb.com/docs/sass.html)
 
-Install Emak Foundation Plugins
 * [Install with Bower](http://bower.io): ```bower install -S 3makkk/foundation-plugins```
 
-Import ```bower_components\emak-foundation-plugins\scss\app.scss``` and ```bower_components\emak-foundation-plugins\scss\_plugin-settings.scss to your ``` app.scss``` 
-
-
-** Standalone **
-Doc will be added.
+Import ```bower_components\emak-foundation-plugins\scss\app.scss``` and ```bower_components\emak-foundation-plugins\scss\_plugin-settings.scss``` to your ```app.scss``` 
 
 
 Plugins
