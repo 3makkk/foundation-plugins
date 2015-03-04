@@ -1,0 +1,35 @@
+$include-html-zoom-classes: $include-html-classes !default;
+$zoom-transition-speed: .3s;
+$zoom-scale-default: scale(1,1);
+$zoom-scale-hover: scale(1, 1.3); 
+
+
+@mixin zoom-container() {
+    overflow: hidden;
+    position: relative;
+
+    > .zoom {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      -moz-transition: all $zoom-transition-speed;
+      -webkit-transition: all $zoom-transition-speed;
+      transition: all $zoom-transition-speed;
+      -moz-transform: $zoom-scale-default;
+      -webkit-transform: $zoom-scale-default;
+      transform: $zoom-scale-default;
+
+      &:hover, &.active {
+        -moz-transform: $zoom-scale-hover;
+        -webkit-transform: $zoom-scale-hover;
+        transform: $zoom-scale-hover;
+      }
+    }
+}
+@include exports("zoom") {
+  @if $include-html-zoom-classes {
+    .zoomable {
+      @include zoom-container();
+    }
+  }
+}

@@ -1,21 +1,20 @@
+@import "foundation/components/inline-lists";
+
 $include-html-inline-list-divided-classes: $include-html-classes !default;
-$inline-list-divider-color: lighten($body-font-color, 10);
+$inline-list-divided-divider-color: lighten($body-font-color, 30);
+$inline-list-divided-default-float-list-margin: $inline-list-default-float-list-margin / 2;
+$inline-list-divided-default-float-margin: - $inline-list-default-float-list-margin;
+$inline-list-divided-float: $default-float;
 
 @mixin inline-list-divided() {
 
-  list-style: none;
-  overflow: $inline-list-overflow;
-
+  @include inline-list();
 
   & > li {
-    border-right: 1px solid $inline-list-divider-color;
+    border-right: 1px solid $inline-list-divided-divider-color;
+    margin-left: $inline-list-divided-default-float-list-margin;
+    padding-right: $inline-list-divided-default-float-list-margin;
     &:last-child { border-right: none;}
-    margin: 0;
-    padding: 0 .5em;
-    list-style: none;
-    float: $default-float;
-    display: $inline-list-display;
-    &>* { display: $inline-list-children-display; }
   }
 }
 

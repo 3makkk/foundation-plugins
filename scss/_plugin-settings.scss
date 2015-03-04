@@ -1,7 +1,15 @@
 // Background Video
-// $include-html-background-video-classes: $include-html-classes !default;
+$include-html-background-video-classes: $include-html-classes !default;
 
 // Inline List Diveded
-// $include-html-inline-list-divided-classes: $include-html-classes !default;
-// $inline-list-divider-color: lighten($body-font-color, 10);
+$include-html-inline-list-divided-classes: $include-html-classes !default;
+$inline-list-divided-divider-color: lighten($body-font-color, 30);
+$inline-list-divided-default-float-list-margin: $inline-list-default-float-list-margin / 2;
+$inline-list-divided-default-float-margin: - $inline-list-default-float-list-margin;
+$inline-list-divided-float: $default-float;
+
+// Zoom
+$zoom-transition-speed: .3s;
+$zoom-scale-default: scale(1,1);
+$zoom-scale-hover: scale(1, 1.3); 
 
